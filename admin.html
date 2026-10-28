@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin | IAM Demo Application</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <nav>
+    <a class="logo" href="index.html">IAM Demo</a>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="admin.html" data-admin-only>Admin</a>
+    <a id="logout" href="#">Log out</a>
+    <span class="user-chip" id="user-chip"></span>
+  </nav>
+  <main class="wide">
+    <h1>Admin console</h1>
+    <div id="admin-gate" class="hidden">
+      <p class="status bad">Administrators only</p>
+      <p>Your account is not in the <b>admins</b> group. Ask an administrator to add you.</p>
+    </div>
+    <div id="admin-content" class="hidden">
+      <p>Manage who can reach protected applications.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>User</th><th>Group</th><th>Last login</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>alex@example.com</td><td>admins</td><td>Today</td><td><span class="badge">Active</span></td></tr>
+            <tr><td>sam@example.com</td><td>employees</td><td>Yesterday</td><td><span class="badge">Active</span></td></tr>
+            <tr><td>jo@example.com</td><td>hr</td><td>3 days ago</td><td><span class="badge warn">MFA pending</span></td></tr>
+            <tr><td>pat@example.com</td><td>contractors</td><td>14 days ago</td><td><span class="badge bad">Suspended</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p id="demo-toggle" class="hidden"><button class="btn secondary" onclick="toggleDemoAdmin()">Toggle demo admin role</button></p>
+    <p class="note">This page only hides content in the browser. The real protection is an Access policy on /admin*.</p>
+  </main>
+</body>
+</html>

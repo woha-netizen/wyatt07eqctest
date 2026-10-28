@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | IAM Demo Application</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <nav>
+    <a class="logo" href="index.html">IAM Demo</a>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="admin.html" data-admin-only>Admin</a>
+    <a id="logout" href="#">Log out</a>
+    <span class="user-chip" id="user-chip"></span>
+  </nav>
+  <main class="wide">
+    <h1>Dashboard</h1>
+    <p>You are viewing a protected page. Every request to it was checked by your identity policy.</p>
+    <div class="grid">
+      <div class="stat"><b>3</b><span>Applications you can open</span></div>
+      <div class="stat"><b>1</b><span>Active session</span></div>
+      <div class="stat"><b id="session-time">—</b><span>Page loaded</span></div>
+    </div>
+    <h2>Your applications</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Application</th><th>Policy</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>IAM Demo Application</td><td>Allow employees</td><td><span class="badge">Allowed</span></td></tr>
+          <tr><td>HR Portal</td><td>Allow HR group</td><td><span class="badge warn">Requires MFA</span></td></tr>
+          <tr><td>Admin Console</td><td>Allow admins</td><td><span class="badge bad">Restricted</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

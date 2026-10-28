@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile | IAM Demo Application</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <nav>
+    <a class="logo" href="index.html">IAM Demo</a>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="admin.html" data-admin-only>Admin</a>
+    <a id="logout" href="#">Log out</a>
+    <span class="user-chip" id="user-chip"></span>
+  </nav>
+  <main class="wide">
+    <h1>Your profile</h1>
+    <dl>
+      <dt>Name</dt><dd id="profile-name">—</dd>
+      <dt>Email</dt><dd id="profile-email">—</dd>
+      <dt>Identity provider</dt><dd id="profile-idp">—</dd>
+      <dt>Country</dt><dd id="profile-country">—</dd>
+      <dt>Groups</dt><dd id="profile-groups">—</dd>
+      <dt>Role</dt><dd id="profile-role">—</dd>
+      <dt>Source</dt><dd id="profile-mode">—</dd>
+    </dl>
+    <h2>Raw identity</h2>
+    <pre id="profile-json">Loading…</pre>
+    <p class="note">Behind Cloudflare Access this comes from /cdn-cgi/access/get-identity. Locally it shows a demo user.</p>
+  </main>
+</body>
+</html>

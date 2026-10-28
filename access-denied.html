@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Access denied | IAM Demo Application</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <nav>
+    <a class="logo" href="index.html">IAM Demo</a>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="admin.html" data-admin-only>Admin</a>
+    <a id="logout" href="#">Log out</a>
+    <span class="user-chip" id="user-chip"></span>
+  </nav>
+  <main>
+    <h1>Access denied</h1>
+    <p class="status bad">You are not authorised to view this application</p>
+    <p>Your account does not match the access policy. Contact your administrator and include the email you signed in with.</p>
+    <p><a class="btn secondary" href="index.html">Back to home</a></p>
+  </main>
+</body>
+</html>
