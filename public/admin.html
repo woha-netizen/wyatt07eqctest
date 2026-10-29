@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin | IAM Demo Application</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/app.js" defer></script>
+</head>
+<body data-page="admin">
+  <nav>
+    <a class="logo" href="/">IAM Demo</a>
+    <a href="/">Home</a>
+    <a href="/dashboard" data-auth="in" class="hidden">Dashboard</a>
+    <a href="/profile" data-auth="in" class="hidden">Profile</a>
+    <a href="/admin" data-auth="admin" class="hidden">Admin</a>
+    <a href="/login" data-auth="out">Log in</a>
+    <a href="/register" data-auth="out">Register</a>
+    <button id="logout" class="linkbtn hidden" data-auth="in" type="button">Log out</button>
+    <span class="user-chip" id="user-chip"></span>
+  </nav>
+  <main class="wide">
+    <h1>Admin console</h1>
+    <p>Manage the accounts that can sign in. Suspending a user signs them out immediately.</p>
+    <div id="msg" class="msg hidden" role="alert"></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Username</th><th>Email</th><th>Role</th><th>Status</th><th>Last login</th><th>Actions</th></tr></thead>
+        <tbody id="users-body"></tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Access denied | IAM Demo Application</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/app.js" defer></script>
+</head>
+<body data-page="denied">
+  <nav>
+    <a class="logo" href="/">IAM Demo</a>
+    <a href="/">Home</a>
+    <a href="/dashboard" data-auth="in" class="hidden">Dashboard</a>
+    <a href="/profile" data-auth="in" class="hidden">Profile</a>
+    <a href="/admin" data-auth="admin" class="hidden">Admin</a>
+    <a href="/login" data-auth="out">Log in</a>
+    <a href="/register" data-auth="out">Register</a>
+    <button id="logout" class="linkbtn hidden" data-auth="in" type="button">Log out</button>
+    <span class="user-chip" id="user-chip"></span>
+  </nav>
+  <main>
+    <h1>Access denied</h1>
+    <p class="status bad">Administrators only</p>
+    <p>Your account does not have permission to view this page. Ask an administrator to change your role.</p>
+    <p><a class="btn secondary" href="/dashboard">Back to dashboard</a></p>
+  </main>
+</body>
+</html>

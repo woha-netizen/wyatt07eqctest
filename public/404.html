@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not found | IAM Demo Application</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/app.js" defer></script>
+</head>
+<body data-page="notfound">
+  <nav>
+    <a class="logo" href="/">IAM Demo</a>
+    <a href="/">Home</a>
+    <a href="/dashboard" data-auth="in" class="hidden">Dashboard</a>
+    <a href="/profile" data-auth="in" class="hidden">Profile</a>
+    <a href="/admin" data-auth="admin" class="hidden">Admin</a>
+    <a href="/login" data-auth="out">Log in</a>
+    <a href="/register" data-auth="out">Register</a>
+    <button id="logout" class="linkbtn hidden" data-auth="in" type="button">Log out</button>
+    <span class="user-chip" id="user-chip"></span>
+  </nav>
+  <main>
+    <h1>Page not found</h1>
+    <p>That page does not exist or has moved.</p>
+    <p><a class="btn" href="/">Go to home</a></p>
+  </main>
+</body>
+</html>
