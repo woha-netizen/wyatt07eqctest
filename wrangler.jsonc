@@ -1,21 +1,17 @@
 {
-  "name": "wyatt07eqctest",
-  "main": "src/worker.js",
-  "compatibility_date": "2026-10-01",
-  "assets": {
-    "directory": "./public",
-    "binding": "ASSETS",
-    "not_found_handling": "404-page",
-    "run_worker_first": ["/api/*", "/dashboard*", "/profile*", "/admin*"]
-  },
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "iam-demo-db",
-      "database_id": "PASTE-YOUR-D1-DATABASE-ID-HERE"
+  // ...
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "invocation_logs": true,
+      "persist": true
+    },
+    "traces": {
+      "enabled": false,
+      "head_sampling_rate": 1,
+      "persist": true
     }
-  ],
-  "vars": {
-    "ALLOW_REGISTRATION": "true"
-  }
+  },
+  // ...
 }
