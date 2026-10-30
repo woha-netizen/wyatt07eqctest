@@ -1,0 +1,4 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Log in</title><link rel="stylesheet" href="style.css"></head><body><nav><a class="logo" href="index.html">MySite</a><div id="links"></div></nav>
+<form class="card" id="f"><h2>Log in</h2><label>Email</label><input id="email" type="email" required autocomplete="email"><label>Password</label><input id="password" type="password" required autocomplete="current-password"><div class="cf-turnstile"></div><button class="btn">Log in</button><div id="msg" class="msg"></div><p class="muted">No account? <a href="signup.html">Sign up</a></p></form>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=mountTurnstile&render=explicit" async defer></script>
+<script src="app.js"></script><script src="data.js"></script><script>renderNav();$('#f').onsubmit=handleLogin;</script></body></html>
